@@ -1,8 +1,8 @@
-//version 0 of cruel_world
+//version 2 of cruel_world with errors fixed
 
 #include "../../std_lib_facilities.h"
 
-int Main() {
-    STRING s = "Goodbye, cruel world! ";
-    cOut << S << '\n';
+int main() {
+    string s = "Goodbye, cruel world! ";
+    cout << s << '\n';
 }
