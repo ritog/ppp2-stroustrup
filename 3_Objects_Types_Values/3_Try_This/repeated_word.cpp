@@ -4,9 +4,13 @@ int main() {
     string previous = "";
     string current;
 
+    int number_of_words = 0;
+
     while (cin >> current) {
+        ++number_of_words;
         if (current == previous) {
-            cout << "Repeated word: " << current << "\n";
+            cout << "word no. " << number_of_words
+                 << "\nRepeated word: " << current << "\n";
         }
         previous = current;
     }
