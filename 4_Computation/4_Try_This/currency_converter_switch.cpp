@@ -1,3 +1,5 @@
+//in this program, we reuse some code from currency_converter.cpp
+
 #include "../../std_lib_facilities.h"
 
 int main (){
