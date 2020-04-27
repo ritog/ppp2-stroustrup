@@ -79,6 +79,7 @@ UP TO DRILL 6
         double in_to_m = 0.0254;
         double ft_to_m = 0.3048;
         int count = 0;
+        vector<double> values_in_m {0};
 
     cout << "Enter a length with unit separated by a space.(in/ft/m/cm)\n";
     cout << "Example: \"12 in\", \"15.6 ft\"\n";
@@ -88,21 +89,25 @@ UP TO DRILL 6
             cout << a << " " << unit << "\n";
             if (unit == "in") {
                 sum += a * in_to_m;
+                values_in_m.push_back(a * in_to_m);
                 if ((a * in_to_m) > largest) {largest = a * in_to_m;}
                 if ((a * in_to_m) < smallest) {smallest = a * in_to_m;}
             }
             else if (unit == "ft") {
                 sum += a * ft_to_m;
+                values_in_m.push_back(a * ft_to_m);
                 if ((a * ft_to_m) > largest) {largest = a * ft_to_m;}
                 if ((a * ft_to_m) < smallest) {smallest = a * ft_to_m;}
             }
             else if (unit == "cm") {
                 sum += a * cm_to_m;
+                values_in_m.push_back(a * cm_to_m);
                 if ((a * cm_to_m) > largest) {largest = a * cm_to_m;}
                 if ((a * cm_to_m) < smallest) {smallest = a * cm_to_m;}
             }
             else if (unit == "m") {
                 sum += a;
+                values_in_m.push_back(a);
                 if (a > largest) {largest = a;}
                 if (a < smallest) {smallest = a;}
             }
@@ -116,5 +121,8 @@ UP TO DRILL 6
     cout << "\nThe largest value (in metres) is: " << largest;
     cout << "\nThe smallest value is (in metres) is: " << smallest;
     cout << "\n";
+    cout << "You have entered " << count << " numbers.\n";
+    cout << "Entered values (in metres): \n";
+    for (double x: values_in_m) {cout << x << " ";}
     return 0;
 }
