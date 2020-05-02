@@ -9,3 +9,6 @@ Makefile
 
 #ignoring a.out files
 a.out
+
+#ignoring swap
+*.swp
