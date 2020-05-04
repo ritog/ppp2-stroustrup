@@ -11,7 +11,7 @@ int main() {
     for(auto x: nums) { cout << x << " ";}
 
     cout << "\n";
-    
+
     return 0;
 
 }
